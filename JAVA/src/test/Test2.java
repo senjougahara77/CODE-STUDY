@@ -58,15 +58,26 @@ public class Test2 {
 //                System.out.println("c");
 //                break;
 //        }
-           int number = in.nextInt();
-           int count = 0;
-           do
+           int n = in.nextInt();
+           int isprime = 1;
+           for (int i=2;i<n;i++)
            {
-           number = number/10;
-           count = count+1;
-           }while ( number > 0 );
-
-            System.out.println(count);
+               if(n%i == 0)
+               {
+                isprime = 0;
+                System.out.println("不是素数");
+                break;
+               }
+           }
+           if (isprime==1)
+           {
+               System.out.println("是素数");
+           }
+//           {
+//           number = number/10;
+//           count = count+1;
+//           }while ( number > 0 );
+//            System.out.println(count);
     }
 
 }
