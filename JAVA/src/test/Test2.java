@@ -58,21 +58,35 @@ public class Test2 {
 //                System.out.println("c");
 //                break;
 //        }
-           int n = in.nextInt();
-           int isprime = 1;
-           for (int i=2;i<n;i++)
-           {
-               if(n%i == 0)
+//           int n = in.nextInt();
+
+
+// 输出100以内的素数 前50个素数
+        int k=0;
+           for (int n=2; ; n++)
+          {
+              int isprime = 1;
+              for (int i = 2; i < n; i++)
                {
-                isprime = 0;
-                System.out.println("不是素数");
-                break;
+                   if (n % i == 0)
+                   {
+                       isprime = 0;
+//                       System.out.println("不是素数");
+                       break;
+                   }
+               }
+               if (isprime == 1)
+               {
+                   System.out.print(n+" ");
+                   k+=1;
+               }
+               if (k == 50)
+               {
+                   break;
                }
            }
-           if (isprime==1)
-           {
-               System.out.println("是素数");
-           }
+
+
 //           {
 //           number = number/10;
 //           count = count+1;
