@@ -14,29 +14,28 @@ public class Test3 {
 //            sum+=1.0/i;
 //        }
 //        System.out.printf("%.2f",sum);
-        int[] numbers = new int [100];
-        int x = 0;
         double sum = 0;
         int cnt = 0;
-        x = in.nextInt();
-        while(x != -1)
-        {
-            numbers[cnt] = x;
-            sum += x;
-            cnt ++;
-            x = in.nextInt();
+        cnt = in.nextInt();
+        if (cnt > 0) {
+            int[] numbers = new int[cnt];
+            for (int i=0; i<cnt; i++){
+                numbers[i] = in.nextInt();
+                sum += numbers[i];
         }
-        if ( cnt > 0)
-        {
-            double ave = sum/cnt;
-            for (int i=1; i<=cnt; i++)
-            {
-                if (numbers[i]>=ave)
-                {
-                   System.out.println(numbers[i]);
+        double ave = sum / cnt;
+        for (int i=0; i< numbers.length; i++) {
+                if (numbers[i] >= ave) {
+                    System.out.println(numbers[i]);
                 }
-            }
-            System.out.println(sum/cnt);
         }
+        System.out.println(ave);
+        }
+//        数组遍历：
+//        int[] data= {1,2,3,4};
+//        for (int k : data){
+//            break;
+//        }
+
     }
 }
